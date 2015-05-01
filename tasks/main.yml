@@ -1,0 +1,7 @@
+---
+# Install PostGIS PostgreSQL extension
+
+- include: install-postgis.yml
+
+- include: app-db.yml
+  when: postgis_enable_app_db == true or postgis_enable_app_db == "True"

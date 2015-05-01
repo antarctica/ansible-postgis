@@ -1,0 +1,12 @@
+---
+# Default variables - inventory or playbook overrides will be respected
+
+# PostgreSQL Users
+postgis_controller_postgresql_user_username: "{{ postgresql_server_controller_postgresql_user_username | default('controller') }}"
+postgis_controller_postgresql_user_password: "{{ postgresql_server_controller_postgresql_user_password | default('stirring-up^the=flames$381194££iz€JQ4') }}"
+
+# PostgreSQL Databases
+postgis_app_db_name: "{{ postgresql_server_app_db_name | default('app') }}"
+
+# PostGIS Databases
+postgis_enable_app_db: "{{ postgresql_server_create_app_db | default(false) }}"

@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  description: Installs the PostGIS PostgreSQL extension and optionally enables this within an 'app' db
+  author: British Antarctic Survey - Web and Applications Team
+  company: British Antarctic Survey
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+  - name: Ubuntu
+      - trusty
+  categories:
+  - web
+
+armadillo_info:
+  name: PostGIS
+  version: 0.1.0
+  source: git@stash.ceh.ac.uk:7999/barc/postgis.git
+  dependencies: []
+
+dependencies:
+  - postgresql-server
